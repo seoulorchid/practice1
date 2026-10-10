@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>조기축구 공감썰 표지</title>
+<style>
+  @font-face { font-family: "BHS"; src: url("../logo/BlackHanSans.woff2") format("woff2"); }
+  @font-face { font-family: "Jua"; src: url("../logo/Jua.woff2") format("woff2"); }
+  body { margin: 0; }
+  #cover {
+    position: relative; width: 1080px; height: 1920px; overflow: hidden;
+    background: #37A1F3;
+  }
+  #cover .photo {
+    position: absolute; left: 0; top: 160px; width: 1080px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 120px);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 120px);
+  }
+  #cover .logo { position: absolute; top: 34px; left: 50%; transform: translateX(-50%); height: 120px; }
+  #cover .text { position: absolute; left: 0; top: 0; }
+  #cover .text text { paint-order: stroke fill; stroke: #111; stroke-linejoin: round; text-anchor: middle; }
+  #cover .line1 { font-family: "Jua", sans-serif; font-size: 96px; fill: #fff; stroke-width: 18px; }
+  #cover .line2.back { fill: #111; stroke-width: 40px; }
+  #cover .line2 { font-family: "BHS", sans-serif; font-size: 140px; fill: #FFD400; stroke-width: 6px; letter-spacing: 2px; }
+</style>
+</head>
+<body>
+<div id="cover">
+  <img class="photo" src="01-fullback.jpg" alt="">
+  <img class="logo" src="../logo/horizontal.png" alt="칠봉아빠의 축구생활">
+  <svg class="text" width="1080" height="560" viewBox="0 0 1080 560">
+    <text class="line1" x="540" y="285">조기축구 포지션 짤 때</text>
+    <text class="line2 back" x="540" y="460">전원 풀백 실화?!</text>
+    <text class="line2" x="540" y="460">전원 풀백 실화?!</text>
+  </svg>
+</div>
+</body>
+</html>
