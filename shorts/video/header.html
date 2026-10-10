@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>영상 상단 제목</title>
+<style>
+  @font-face { font-family: "BHS"; src: url("../../logo/BlackHanSans.woff2") format("woff2"); }
+  @font-face { font-family: "Jua"; src: url("../../logo/Jua.woff2") format("woff2"); }
+  body { margin: 0; }
+  #cover { position: relative; width: 1080px; height: 400px; background: #37A1F3; overflow: hidden; }
+  #cover .logo { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); height: 96px; }
+  #cover svg { position: absolute; left: 0; top: 0; }
+  #cover text { paint-order: stroke fill; stroke: #111; stroke-linejoin: round; text-anchor: middle; }
+  .line1 { font-family: "Jua", sans-serif; font-size: 74px; fill: #fff; stroke-width: 15px; }
+  .line2 { font-family: "BHS", sans-serif; font-size: 116px; fill: #FFD400; stroke-width: 5px; }
+  .line2.back { fill: #111; stroke-width: 34px; }
+</style></head>
+<body><div id="cover">
+  <img class="logo" src="../../logo/horizontal.png" alt="">
+  <svg width="1080" height="400" viewBox="0 0 1080 400">
+    <text class="line1" x="540" y="205">조기축구 포지션 짤 때</text>
+    <text class="line2 back" x="540" y="350">전원 풀백 실화?!</text>
+    <text class="line2" x="540" y="350">전원 풀백 실화?!</text>
+  </svg>
+</div></body></html>
