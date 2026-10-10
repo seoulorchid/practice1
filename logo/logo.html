@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>칠봉아빠의 축구생활 로고</title>
+<style>
+  @font-face { font-family: "BHS"; src: url("BlackHanSans.woff2") format("woff2"); }
+  @font-face { font-family: "Jua"; src: url("Jua.woff2") format("woff2"); }
+  body { margin: 0; background: transparent; }
+  svg { display: block; }
+  .title { font-family: "BHS", sans-serif; paint-order: stroke fill; stroke-linejoin: round; }
+  .sub { font-family: "Jua", sans-serif; paint-order: stroke fill; stroke-linejoin: round; }
+</style>
+</head>
+<body>
+
+<!-- 공통 심볼: 칠봉아빠 캐릭터 + 공 -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E8FEA"/>
+      <stop offset="1" stop-color="#7CC8FF"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6BCB3C"/>
+      <stop offset="1" stop-color="#48A82A"/>
+    </linearGradient>
+
+    <!-- 축구공 (중심 0,0 / 반지름 50) -->
+    <g id="ball">
+      <clipPath id="ballClip"><circle r="50"/></clipPath>
+      <circle r="50" fill="#fff"/>
+      <g clip-path="url(#ballClip)" fill="#111">
+        <polygon points="0,-17 16,-5 10,14 -10,14 -16,-5"/>
+        <polygon points="0,-62 18,-48 0,-36 -18,-48"/>
+        <polygon points="50,-24 58,4 40,4 34,-16"/>
+        <polygon points="-50,-24 -58,4 -40,4 -34,-16"/>
+        <polygon points="32,40 44,56 22,62 18,46"/>
+        <polygon points="-32,40 -44,56 -22,62 -18,46"/>
+      </g>
+      <g stroke="#111" stroke-width="3" stroke-linecap="round">
+        <line x1="0" y1="-17" x2="0" y2="-36"/>
+        <line x1="16" y1="-5" x2="34" y2="-12"/>
+        <line x1="-16" y1="-5" x2="-34" y2="-12"/>
+        <line x1="10" y1="14" x2="20" y2="44"/>
+        <line x1="-10" y1="14" x2="-20" y2="44"/>
+      </g>
+      <circle r="50" fill="none" stroke="#111" stroke-width="7"/>
+    </g>
+
+    <!-- 칠봉아빠 캐릭터 (머리 중심 0,0) -->
+    <g id="dad" stroke-linejoin="round" stroke-linecap="round">
+      <!-- 들어올린 팔 (팔꿈치 굽힘) -->
+      <path d="M95,175 L165,95 L150,10" fill="none" stroke="#111" stroke-width="46"/>
+      <path d="M95,175 L165,95 L150,10" fill="none" stroke="#fff" stroke-width="28"/>
+      <circle cx="150" cy="0" r="30" fill="#fff" stroke="#111" stroke-width="9"/>
+      <path d="M136,-12 q14,-10 28,0" fill="none" stroke="#111" stroke-width="5"/>
+
+      <!-- 유니폼 -->
+      <path d="M-110,140 Q-60,118 -32,112 Q0,138 32,112 Q60,118 110,140
+               L150,220 L112,244 L100,222 L100,420 L-100,420 L-100,222 L-112,244 L-150,220 Z"
+            fill="#1F5FD6" stroke="#111" stroke-width="10"/>
+      <!-- 소매 끝 흰 줄 / 옆선 -->
+      <path d="M-141,205 L-108,238" stroke="#fff" stroke-width="7"/>
+      <path d="M141,205 L108,238" stroke="#fff" stroke-width="7"/>
+      <path d="M-82,235 L-82,420" stroke="#fff" stroke-width="7"/>
+      <path d="M82,235 L82,420" stroke="#fff" stroke-width="7"/>
+      <!-- 목 -->
+      <path d="M-32,112 Q0,138 32,112" fill="#fff" stroke="#111" stroke-width="9"/>
+      <!-- 등번호 7 (칠봉) -->
+      <text x="0" y="272" text-anchor="middle" class="title" font-size="118" fill="#fff">7</text>
+
+      <!-- 머리 -->
+      <circle r="112" fill="#fff" stroke="#111" stroke-width="11"/>
+      <!-- 눈썹 (살짝 난감) -->
+      <path d="M-58,-38 q16,-12 32,-4" fill="none" stroke="#111" stroke-width="7"/>
+      <path d="M26,-42 q16,-8 32,4" fill="none" stroke="#111" stroke-width="7"/>
+      <!-- 눈 -->
+      <ellipse cx="-40" cy="-5" rx="10" ry="15" fill="#111"/>
+      <ellipse cx="40" cy="-5" rx="10" ry="15" fill="#111"/>
+      <!-- 볼터치 -->
+      <ellipse cx="-70" cy="30" rx="16" ry="9" fill="#FF8A8A" opacity=".6"/>
+      <ellipse cx="70" cy="30" rx="16" ry="9" fill="#FF8A8A" opacity=".6"/>
+      <!-- 입 -->
+      <path d="M-34,30 Q0,34 34,30 Q30,78 0,78 Q-30,78 -34,30 Z" fill="#E5322D" stroke="#111" stroke-width="7"/>
+      <path d="M-16,66 Q0,54 16,66 Q10,76 0,76 Q-10,76 -16,66 Z" fill="#FF8C8C"/>
+      <!-- 땀방울 -->
+      <path d="M-96,-62 q-14,22 0,30 q14,-8 0,-30 Z" fill="#8FD3FF" stroke="#111" stroke-width="5"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- ① 원형 엠블럼 (프로필/썸네일용) -->
+<svg id="emblem" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <clipPath id="inner"><circle cx="500" cy="500" r="440"/></clipPath>
+  <circle cx="500" cy="500" r="488" fill="#111"/>
+  <circle cx="500" cy="500" r="472" fill="#FFD400"/>
+  <circle cx="500" cy="500" r="446" fill="#111"/>
+  <g clip-path="url(#inner)">
+    <rect x="0" y="0" width="1000" height="1000" fill="url(#sky)"/>
+    <!-- 구름 -->
+    <g fill="#fff" opacity=".95">
+      <ellipse cx="190" cy="250" rx="58" ry="26"/><ellipse cx="230" cy="232" rx="40" ry="30"/>
+      <ellipse cx="820" cy="210" rx="58" ry="26"/><ellipse cx="785" cy="192" rx="40" ry="30"/>
+    </g>
+    <!-- 나무 라인 -->
+    <path d="M0,520 q40,-40 80,-10 q40,-40 90,-5 q40,-35 85,0 q45,-40 95,-5 q40,-35 90,0 q45,-40 95,-5 q40,-35 90,0 q45,-40 95,-5 q40,-30 90,5 q40,-30 80,0 L1000,560 L0,560 Z" fill="#2E9E57"/>
+    <!-- 잔디 -->
+    <rect x="0" y="545" width="1000" height="500" fill="url(#grass)"/>
+    <path d="M60,600 L940,600" stroke="#fff" stroke-width="7" opacity=".85"/>
+    <path d="M160,600 L40,700" stroke="#fff" stroke-width="7" opacity=".85"/>
+    <path d="M840,600 L960,700" stroke="#fff" stroke-width="7" opacity=".85"/>
+
+    <use href="#dad" transform="translate(500 300) scale(0.95)"/>
+    <use href="#ball" transform="translate(255 470) scale(0.95)"/>
+    <!-- 공 움직임 선 -->
+    <g stroke="#111" stroke-width="7" stroke-linecap="round">
+      <line x1="160" y1="430" x2="190" y2="440"/>
+      <line x1="150" y1="472" x2="185" y2="474"/>
+      <line x1="162" y1="512" x2="192" y2="506"/>
+    </g>
+  </g>
+
+  <!-- 타이틀 리본 -->
+  <path d="M110,610 L890,610 L860,680 L890,750 L110,750 L140,680 Z" fill="#fff" stroke="#111" stroke-width="10" stroke-linejoin="round"/>
+  <text x="500" y="710" text-anchor="middle" class="sub" font-size="88" fill="#1F5FD6" stroke="#111" stroke-width="0">칠봉아빠의</text>
+  <text x="500" y="885" text-anchor="middle" class="title" font-size="155" fill="#FFD400" stroke="#111" stroke-width="24" letter-spacing="4">축구생활</text>
+</svg>
+
+<!-- ② 가로형 로고 (영상 상단/워터마크용) -->
+<svg id="horizontal" width="1300" height="500" viewBox="0 0 1300 500">
+  <clipPath id="hInner"><circle cx="250" cy="250" r="205"/></clipPath>
+  <circle cx="250" cy="250" r="228" fill="#111"/>
+  <circle cx="250" cy="250" r="218" fill="#FFD400"/>
+  <circle cx="250" cy="250" r="208" fill="#111"/>
+  <g clip-path="url(#hInner)">
+    <rect width="500" height="500" fill="url(#sky)"/>
+    <rect y="330" width="500" height="200" fill="url(#grass)"/>
+    <path d="M40,360 L460,360" stroke="#fff" stroke-width="5" opacity=".85"/>
+    <use href="#dad" transform="translate(250 205) scale(0.72)"/>
+    <use href="#ball" transform="translate(125 380) scale(0.55)"/>
+  </g>
+  <text x="520" y="205" class="sub" font-size="118" fill="#fff" stroke="#111" stroke-width="20">칠봉아빠의</text>
+  <text x="510" y="405" class="title" font-size="210" fill="#FFD400" stroke="#111" stroke-width="30" letter-spacing="6">축구생활</text>
+</svg>
+
+</body>
+</html>
